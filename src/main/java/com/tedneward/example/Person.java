@@ -9,6 +9,8 @@ public class Person implements Comparable<Person> {
   private double salary;
   private String ssn;
   private boolean propertyChangeFired = false;
+
+  private static int count = 0;
   
   public Person() {
     this("", 0, 0.0d);
@@ -18,6 +20,7 @@ public class Person implements Comparable<Person> {
     name = n;
     age = a;
     salary = s;
+    Person.count++;
   }
 
   // Static Methods
@@ -80,6 +83,10 @@ public class Person implements Comparable<Person> {
   }
 
   // Methods
+
+  public int count() {
+    return Person.count;
+  }
 
   public double calculateBonus() {
     return salary * 1.10;
