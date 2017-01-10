@@ -118,6 +118,19 @@ public class Person implements Comparable<Person> {
     }
   }
 
+  // Equatable
+
+  public boolean equals(Object object) {
+
+    if (object == null || !Person.class.isAssignableFrom(object.getClass())) {
+      return false;
+    }
+
+    Person other = (Person) object;
+
+    return this.name.equals(other.name) && this.age == other.age;
+  }
+
   // toString
 
   @Override
