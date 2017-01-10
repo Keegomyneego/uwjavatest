@@ -20,6 +20,19 @@ public class Person {
     salary = s;
   }
 
+  // Static Methods
+
+  public static List<Person> getNewardFamily() {
+    List<Person> newardFamily = new ArrayList<>();
+
+    newardFamily.add(new Person("Ted", 41, 250000));
+    newardFamily.add(new Person("Charlotte", 43, 150000));
+    newardFamily.add(new Person("Michael", 22, 10000));
+    newardFamily.add(new Person("Matthew", 15, 0));
+
+    return newardFamily;
+  }
+
   // Getters and Setters
 
   public int getAge() {
