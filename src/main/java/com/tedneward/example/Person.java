@@ -20,6 +20,32 @@ public class Person {
     salary = s;
   }
 
+  // Getters and Setters
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public double getSalary() {
+    return salary;
+  }
+
+  public void setSalary(double salary) {
+    this.salary = salary;
+  }
+
   public void setSSN(String value) {
     String old = ssn;
     ssn = value;
@@ -27,9 +53,12 @@ public class Person {
     this.pcs.firePropertyChange("ssn", old, value);
     propertyChangeFired = true;
   }
+
   public boolean getPropertyChangeFired() {
     return propertyChangeFired;
   }
+
+  // Methods
 
   public double calculateBonus() {
     return salary * 1.10;
