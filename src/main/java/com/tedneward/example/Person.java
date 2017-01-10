@@ -40,6 +40,10 @@ public class Person implements Comparable<Person> {
   }
 
   public void setAge(int age) {
+    if (age < 0) {
+      throw new IllegalArgumentException("Age cannot be less than 0");
+    }
+
     this.age = age;
   }
 
@@ -48,6 +52,10 @@ public class Person implements Comparable<Person> {
   }
 
   public void setName(String name) {
+    if (name == null) {
+      throw new IllegalArgumentException("Name must not be null");
+    }
+
     this.name = name;
   }
 
