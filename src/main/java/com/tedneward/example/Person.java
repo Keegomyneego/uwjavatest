@@ -3,7 +3,7 @@ package com.tedneward.example;
 import java.beans.*;
 import java.util.*;
 
-public class Person {
+public class Person implements Comparable<Person> {
   private int age;
   private String name;
   private double salary;
@@ -87,6 +87,20 @@ public class Person {
   
   public String tostring() {
     return "{{FIXME}}";
+  }
+
+  // Comparable
+
+  public int compareTo(Person other) {
+    double difference = this.salary - other.salary;
+
+    if (difference > 0) {
+      return 1;
+    } else if (difference < 0) {
+      return -1;
+    } else {
+      return 0;
+    }
   }
 
   // PropertyChangeListener support; you shouldn't need to change any of
