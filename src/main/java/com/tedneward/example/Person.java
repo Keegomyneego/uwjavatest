@@ -109,9 +109,9 @@ public class Person implements Comparable<Person> {
   public int compareTo(Person other) {
     double difference = this.salary - other.salary;
 
-    if (difference > 0) {
+    if (difference < 0) {
       return 1;
-    } else if (difference < 0) {
+    } else if (difference > 0) {
       return -1;
     } else {
       return 0;
