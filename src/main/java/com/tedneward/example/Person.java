@@ -118,6 +118,13 @@ public class Person implements Comparable<Person> {
     }
   }
 
+  // toString
+
+  @Override
+  public String toString() {
+    return "[Person name:"+ this.name +" age:"+ this.age +" salary:"+ this.salary +"]";
+  }
+
   // PropertyChangeListener support; you shouldn't need to change any of
   // these two methods or the field
   //
